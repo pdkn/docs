@@ -39,7 +39,11 @@ Scoped styles also won't apply to other Astro components contained inside of you
 
 The specificity of scoped styles is preserved, allowing them to work consistently alongside other CSS files or CSS libraries while still preserving the exclusive boundaries that prevent styles from applying outside the component.
 
-#### Global Styles
+__*Legacy Browser support*__
+
+The css `where` selector is not supported in [legacy browsers](https://caniuse.com/?search=where). The workaround is to use Global Styles if you need to support older browsers.
+
+### Global Styles
 
 While we recommend scoped styles for most components, you may eventually find a valid reason to write global, unscoped CSS. You can opt-out of automatic CSS scoping with the `<style is:global>` attribute.
 
